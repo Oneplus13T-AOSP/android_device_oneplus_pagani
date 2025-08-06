@@ -30,6 +30,15 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-mtp-SN220.conf_24821:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
 
+# Keymint
+PRODUCT_PACKAGES += \
+    android.hardware.security.keymint3-service.strongbox.nxp \
+    android.hardware.weaver-service.nxp
+
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/nxp/keymint/generic \
+    hardware/nxp/weaver/generic
+
 # LiveDisplay
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_AF,true)
 
