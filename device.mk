@@ -31,6 +31,9 @@ $(foreach display_id, 4630946916234099603 4630946983774026899 463094703957190285
 # Fingerprint
 $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
 
+# Fingerprint
+TARGET_HAS_UDFPS := true
+
 # LiveDisplay
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_AF,true)
 
