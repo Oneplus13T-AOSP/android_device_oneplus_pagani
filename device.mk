@@ -28,6 +28,9 @@ $(foreach display_id, 4630946916234099603 4630946983774026899 463094703957190285
         $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_$(display_id).xml \
     ))
 
+PRODUCT_PACKAGES += \
+    OplusLtpo
+
 # Fingerprint
 $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
 
