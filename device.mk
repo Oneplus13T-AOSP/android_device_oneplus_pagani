@@ -19,12 +19,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 3168
-TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 2640
+TARGET_SCREEN_WIDTH := 1216
 
 # Display
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946756802996883.xml
+$(foreach display_id, 4630946916234099603 4630946983774026899 4630947039571902850 4630947039571902851 4630947075271898515, \
+    $(eval PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_$(display_id).xml \
+    ))
 
 # LiveDisplay
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_AF,true)
