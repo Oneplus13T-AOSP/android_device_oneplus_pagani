@@ -23,6 +23,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     OplusLtpo
 
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,1)
+
 # Fingerprint
 $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
 
