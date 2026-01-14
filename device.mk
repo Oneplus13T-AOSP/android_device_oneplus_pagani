@@ -31,6 +31,9 @@ $(foreach display_id, 4630946916234099603 4630946983774026899 463094703957190285
 PRODUCT_PACKAGES += \
     OplusLtpo
 
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,1)
+
 # Fingerprint
 $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
 
