@@ -403,9 +403,9 @@
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">
         M 0,80
-        M -42,80
-        A 34,34 90 1,0 42,80
-        A 34,34 90 1,0 -42,80
+        M -35,80
+        A 35,35 90 1,0 35,80
+        A 35,35 90 1,0 -35,80
         Z
     </string>
 
