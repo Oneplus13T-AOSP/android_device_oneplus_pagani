@@ -68,9 +68,11 @@ odm/etc/audio/oprec_audrec_params/oprec_record_calibration.bin
 
 # Camera
 odm/bin/hw/vendor.oplus.hardware.cammidasservice-V1-service
+odm/bin/occe_create
 odm/etc/camera/AIAE_Models/AIAEVideoModelMain.bin
 odm/etc/camera/AIAE_Models/AIAEVideoModelTele.bin
 odm/etc/camera/AIAE_Models/AIAEVideoModelWide.bin
+odm/etc/camera/CaliData/stereoParams_golden.bin
 odm/etc/camera/Owl_Algo_model/Owl_Algo_F_FHD.bin
 odm/etc/camera/Owl_Algo_model/Owl_Algo_M_FHD.bin
 odm/etc/camera/Owl_Algo_model/Owl_Algo_M_UHD.bin
@@ -679,6 +681,7 @@ odm/etc/camera/distortionParams.bin
 odm/etc/camera/eis_camera.vcfg
 odm/etc/camera/facesr_ff_v4.3.20_qcom8750_rQsQ_normal@nb_quant_qnn2.25.5_20241106.model
 odm/etc/camera/fb_default
+odm/etc/camera/fb_original
 odm/etc/camera/fdc_cl.cache
 odm/etc/camera/fdc_lite_cl.cache
 odm/etc/camera/fwk_config.json
@@ -688,6 +691,7 @@ odm/etc/camera/main_mapxy_33x25.bin
 odm/etc/camera/media_profiles.xml
 odm/etc/camera/model_fdc.data
 odm/etc/camera/mvg_sat_config.json
+odm/etc/camera/mwcs_model_params.bin
 odm/etc/camera/neon_yuv_LUT_64.bin
 odm/etc/camera/oplus_eis_camera.vcfg
 odm/etc/camera/qnn_binary_9052758122668408981.bin
@@ -706,11 +710,13 @@ odm/etc/camera/wide_inv_padding_mapxy_33x25.bin
 odm/etc/camera/wide_padding_mapxy_33x25.bin
 odm/etc/init/init.camera_process.rc
 odm/etc/init/init.camera_update.rc
+odm/etc/init/occe_create.rc
 odm/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc
 odm/etc/vintf/manifest/manifest_oplus_camera_rfi.xml
 odm/etc/vintf/manifest/manifest_oplus_cammidasservice_aidl.xml
 odm/etc/vintf/manifest/manifest_oplus_sendextcamcmd.xml
 odm/etc/vintf/manifest/vendor.oplus.camera.aon-impl.xml
+odm/lib64/camera/AIAWB_q.odnn
 odm/lib64/camera/components/com.oplus.node.depth.so
 odm/lib64/camera/components/com.oplus.node.evaof.so
 odm/lib64/camera/components/com.oplus.node.mvgsat.so
@@ -753,6 +759,8 @@ odm/lib64/camera/libafCustomParam_Cam1.bin
 odm/lib64/camera/libafCustomParam_Cam2.bin
 odm/lib64/camera/libafCustomParam_Cam3.bin
 odm/lib64/camera/libpdCustomParam_Cam0.bin
+odm/lib64/camera/libpdCustomParam_Cam2.bin
+odm/lib64/camera/libpdCustomParam_Cam3.bin
 odm/lib64/camera/revision.txt
 odm/lib64/hw/camera.oemlayer.so
 odm/lib64/com.oplus.mcx.linearmapper.so
@@ -766,11 +774,13 @@ odm/lib64/libAncFilter.so
 odm/lib64/libAncHumanSegFigureFusion.so
 odm/lib64/libAncSegBaseSdk.so
 odm/lib64/libAncSegmentSdk.so
+odm/lib64/libAutoFocusCrop.so
 odm/lib64/libBasicTonePhoto.so
 odm/lib64/libBokehPre.so
 odm/lib64/libCNamaSDK_vendor.so
 odm/lib64/libCS.so
 odm/lib64/libCaptureBokeh.so
+odm/lib64/libColorMark.so
 odm/lib64/libDocRectification.so
 odm/lib64/libEIS.so
 odm/lib64/libFDClite.so
@@ -803,6 +813,7 @@ odm/lib64/libWaterMark.so
 odm/lib64/lib_rectify.so
 odm/lib64/libaecCustom.so
 odm/lib64/libai_perception_scene_detect.so
+odm/lib64/libaiboost_sydet.so
 odm/lib64/libaisal.so
 odm/lib64/libaisd.so
 odm/lib64/libaisd_fullfov.so
@@ -866,6 +877,7 @@ odm/lib64/libmvgfusion.so
 odm/lib64/libNamaWrapper.so
 odm/lib64/libocce3a.so
 odm/lib64/libocompression.so
+odm/lib64/liboplus_lightsensorprovider.so
 odm/lib64/liboplusdfx.so
 odm/lib64/libopluspdparam.so
 odm/lib64/liboutils.so
@@ -1115,6 +1127,7 @@ vendor/lib64/com.qti.qseeaon.so
 vendor/lib64/com.qti.qseeutils.so
 vendor/lib64/com.qti.settings.sm8750.so
 vendor/lib64/com.qti.stats.common.so
+vendor/lib64/com.qti.stats.sotr.so
 vendor/lib64/com.qualcomm.mcx.distortionmapper.so
 vendor/lib64/com.qualcomm.mcx.linearmapper.so
 vendor/lib64/com.qualcomm.mcx.nonlinearmapper.so
@@ -1207,6 +1220,26 @@ vendor/lib64/libvideoml.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so
+
+# Camera algo configs
+odm/etc/camera/DitherTabU8
+odm/etc/camera/dolby_vainr_cfg.json
+odm/etc/camera/vainr_cfg.json
+odm/etc/camera/video_ltm.json
+odm/etc/camera/video_ltm_ctrl.json
+odm/etc/camera/config/video_ai_proc_cfg.json
+odm/etc/camera/algo/json/DitherTabU8
+odm/etc/camera/algo/json/video_ltm.json
+odm/etc/camera/algo/json/video_ltm_ctrl.json
+odm/etc/camera/algo/lib/arm64-v8a/libVideoLTM.so
+
+# Camera algo libraries
+odm/lib64/libVideoAIProc.so
+odm/lib64/libVideoLTM.so
+
+# Camera nodes
+odm/lib64/camera/components/com.oplus.node.videoainr.so
+odm/lib64/camera/components/com.oplus.node.videoltm.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
@@ -1386,6 +1419,9 @@ odm/firmware/uff_spi.mdt
 # Horae
 odm/etc/horae/horae_target.conf
 
+# Media color conversion
+odm/etc/static_lut_bt2020_to_sRGB_mm.cube
+
 # NFC firmware
 odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_45:vendor/firmware/sn220u.bin
 
@@ -1533,3 +1569,7 @@ odm/etc/vibrator/vibrator_effect.json
 odm/etc/wifi/peach/bdwlan.elf
 odm/etc/wifi/peach/regdb.bin
 odm/etc/wifi/peach/regdb_version
+
+# Camera
+vendor/lib64/libutils.so:vendor/lib64/libutils-stock.so;FIX_SONAME
+vendor/lib64/libui.so:vendor/lib64/libui-stock.so;FIX_SONAME
