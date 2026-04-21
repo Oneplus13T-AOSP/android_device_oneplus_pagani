@@ -34,6 +34,9 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 TARGET_HAS_UDFPS := true
 
+# Fingerprint
+$(call soong_config_set,surfaceflinger,udfps_lib,//device/oneplus/pagani/addons/fingerprint:libudfps_extension.pagani)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
