@@ -14,6 +14,11 @@ $(call inherit-product, device/oneplus/pagani/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Call mindthegapps
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+ 
+WITH_GAPPS := true
+
 PRODUCT_NAME := lineage_pagani
 PRODUCT_DEVICE := pagani
 PRODUCT_MANUFACTURER := OnePlus
