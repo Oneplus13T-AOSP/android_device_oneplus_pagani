@@ -33,6 +33,7 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
 $(call soong_config_set,surfaceflinger,frame_rate_category_min,1)
+$(call soong_config_set,surfaceflinger,arr_use_oplus_ltpo_rates,true)
 
 # Fingerprint
 $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
