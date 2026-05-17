@@ -18,6 +18,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
  
 WITH_GAPPS := true
+TARGET_DISABLE_MATLOG := true
 
 PRODUCT_NAME := lineage_pagani
 PRODUCT_DEVICE := pagani
