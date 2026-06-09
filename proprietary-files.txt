@@ -783,6 +783,7 @@ odm/lib64/libCaptureBokeh.so
 odm/lib64/libColorMark.so
 odm/lib64/libDocRectification.so
 odm/lib64/libEIS.so
+odm/lib64/libEISLive.so
 odm/lib64/libFDClite.so
 odm/lib64/libFaceBeautyJni.so
 odm/lib64/libFaceBeautyPre.so
