@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 13T (PKX110_16.0.7.200(CN01)).
+## are from OnePlus 13T (PKX110_16.0.8.300(CN01)).
 
 # ACDB
 odm/etc/acdbdata/Audio_Parameter_Version.txt
@@ -11,7 +11,6 @@ odm/etc/acdbdata/up_ve_enpuv5_hh.eai
 # ADSP modules
 odm/lib/rfsa/adsp/libtfadsp_sb5_5_rx.so
 odm/lib/rfsa/adsp/libtfadsp_sb5_5_tx.so
-odm/lib/rfsa/adsp/oplusmss/unsigned/libQnnHtpV79Skel.so
 
 # ANT+ firmware
 odm/firmware/secure_ta/antdtx.b00
@@ -1338,14 +1337,6 @@ odm/firmware/uff_spi.b07
 odm/firmware/uff_spi.b08
 odm/firmware/uff_spi.mdt
 
-# Neural networks
-odm/lib64/oplusmss/libQnnHtp.so;MODULE_SUFFIX=.oplusmss
-odm/lib64/oplusmss/libQnnHtpPrepare.so;MODULE_SUFFIX=.oplusmss
-odm/lib64/oplusmss/libQnnHtpV79Stub.so;MODULE_SUFFIX=.oplusmss
-odm/lib64/oplusmss/libQnnSystem.so;MODULE_SUFFIX=.oplusmss
-odm/lib64/oplusmss/libaiboost.so;MODULE_SUFFIX=.oplusmss
-odm/lib64/oplusmss/libaiboost_qnn_external_delegate.so;MODULE_SUFFIX=.oplusmss;FIX_SONAME
-
 # NFC
 odm/etc/nfc/libnfc-mtp-SN220.conf_24821:vendor/etc/libnfc-nxp.conf
 odm/etc/nfc/libnfc-nci.conf_24821:vendor/etc/libnfc-nci.conf
@@ -1358,6 +1349,7 @@ vendor/lib64/sensors.qsh.so
 odm/etc/sensor/config/json_list
 odm/etc/sensor/config/lux_aod.json
 odm/etc/sensor/config/oplus_car_motion.json
+odm/etc/sensor/config/oplus_flight_scene.json
 odm/etc/sensor/config/oplus_rotation_detect.json
 odm/etc/sensor/config/pagani_qrd_ois_system.json
 odm/etc/sensor/config/pakala_mtp_ak09919.json
