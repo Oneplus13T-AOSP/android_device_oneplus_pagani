@@ -1324,6 +1324,7 @@ odm/etc/PanelChaplin/Game_RPG.txt
 odm/etc/PanelChaplin/Game_Vivid_Fliter.txt
 odm/etc/PanelChaplin/Lut3D_311
 odm/etc/PanelChaplin/Lut3D_312
+odm/etc/PanelChaplin/panelchaplin
 odm/etc/p_7_a0020_backlight_data.xml
 odm/etc/p_7_a0020_cinema_eyeprotect_data.xml
 odm/etc/p_7_a0020_cm2_standard_eyeprotect_data.xml
