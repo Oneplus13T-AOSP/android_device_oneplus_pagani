@@ -23,8 +23,8 @@ PRODUCT_MODEL := PKX110
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="qssi-user 16 BP2A.250605.015 1782915732929 release-keys" \
-    BuildFingerprint=OnePlus/PKX110/OP60F5L1:16/AP3A.240617.008/V.3379136-ee8077-f2083c:user/release-keys \
+    BuildDesc="qssi-user 16 BP2A.250605.015 1785568253866 release-keys" \
+    BuildFingerprint=OnePlus/PKX110/OP60F5L1:16/AP3A.240617.008/V.526b505-2d5a96d-2d6b5ad:user/release-keys \
     DeviceName=OP60F5L1 \
     DeviceProduct=PKX110 \
     SystemDevice=OP60F5L1 \
