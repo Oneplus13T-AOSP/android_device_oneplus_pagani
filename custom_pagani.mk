@@ -14,6 +14,9 @@ $(call inherit-product, device/oneplus/pagani/device.mk)
 # Inherit some common PixelOS stuff.
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
+# Inherit BCR
+$(call inherit-product, vendor/bcr/bcr.mk)
+
 PRODUCT_NAME := custom_pagani
 PRODUCT_DEVICE := pagani
 PRODUCT_MANUFACTURER := OnePlus
