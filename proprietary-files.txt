@@ -1209,6 +1209,26 @@ vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so
 
+# Camera algo configs
+odm/etc/camera/DitherTabU8
+odm/etc/camera/dolby_vainr_cfg.json
+odm/etc/camera/vainr_cfg.json
+odm/etc/camera/video_ltm.json
+odm/etc/camera/video_ltm_ctrl.json
+odm/etc/camera/config/video_ai_proc_cfg.json
+odm/etc/camera/algo/json/DitherTabU8
+odm/etc/camera/algo/json/video_ltm.json
+odm/etc/camera/algo/json/video_ltm_ctrl.json
+odm/etc/camera/algo/lib/arm64-v8a/libVideoLTM.so
+
+# Camera algo libraries
+odm/lib64/libVideoAIProc.so
+odm/lib64/libVideoLTM.so
+
+# Camera nodes
+odm/lib64/camera/components/com.oplus.node.videoainr.so
+odm/lib64/camera/components/com.oplus.node.videoltm.so
+
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
 vendor/firmware/CAMERA_ICP.b01
