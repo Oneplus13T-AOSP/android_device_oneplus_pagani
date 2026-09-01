@@ -71,6 +71,7 @@ odm/bin/hw/vendor.oplus.hardware.cammidasservice-V1-service
 odm/etc/camera/AIAE_Models/AIAEVideoModelMain.bin
 odm/etc/camera/AIAE_Models/AIAEVideoModelTele.bin
 odm/etc/camera/AIAE_Models/AIAEVideoModelWide.bin
+odm/etc/camera/CaliData/stereoParams_golden.bin
 odm/etc/camera/Owl_Algo_model/Owl_Algo_F_FHD.bin
 odm/etc/camera/Owl_Algo_model/Owl_Algo_M_FHD.bin
 odm/etc/camera/Owl_Algo_model/Owl_Algo_M_UHD.bin
@@ -679,6 +680,7 @@ odm/etc/camera/distortionParams.bin
 odm/etc/camera/eis_camera.vcfg
 odm/etc/camera/facesr_ff_v4.3.20_qcom8750_rQsQ_normal@nb_quant_qnn2.25.5_20241106.model
 odm/etc/camera/fb_default
+odm/etc/camera/fb_original
 odm/etc/camera/fdc_cl.cache
 odm/etc/camera/fdc_lite_cl.cache
 odm/etc/camera/fwk_config.json
@@ -688,6 +690,7 @@ odm/etc/camera/main_mapxy_33x25.bin
 odm/etc/camera/media_profiles.xml
 odm/etc/camera/model_fdc.data
 odm/etc/camera/mvg_sat_config.json
+odm/etc/camera/mwcs_model_params.bin
 odm/etc/camera/neon_yuv_LUT_64.bin
 odm/etc/camera/oplus_eis_camera.vcfg
 odm/etc/camera/qnn_binary_9052758122668408981.bin
