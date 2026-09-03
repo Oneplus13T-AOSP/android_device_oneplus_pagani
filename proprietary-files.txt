@@ -68,6 +68,7 @@ odm/etc/audio/oprec_audrec_params/oprec_record_calibration.bin
 
 # Camera
 odm/bin/hw/vendor.oplus.hardware.cammidasservice-V1-service
+odm/bin/occe_create
 odm/etc/camera/AIAE_Models/AIAEVideoModelMain.bin
 odm/etc/camera/AIAE_Models/AIAEVideoModelTele.bin
 odm/etc/camera/AIAE_Models/AIAEVideoModelWide.bin
@@ -709,6 +710,7 @@ odm/etc/camera/wide_inv_padding_mapxy_33x25.bin
 odm/etc/camera/wide_padding_mapxy_33x25.bin
 odm/etc/init/init.camera_process.rc
 odm/etc/init/init.camera_update.rc
+odm/etc/init/occe_create.rc
 odm/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc
 odm/etc/vintf/manifest/manifest_oplus_camera_rfi.xml
 odm/etc/vintf/manifest/manifest_oplus_cammidasservice_aidl.xml
