@@ -297,7 +297,7 @@ NXP_RF_CONF_BLK_1={
 
 NXP_RF_CONF_BLK_2={
     20,   02,   CF,   04,
-    A0,   0E,   20,   F0,   00,   1E,   15,   01,   01,   01,   00,   00,   00,   00,   00,   A7,   BE,   FF,   FF,   05,   00,   00,   00,   2C,   2C,   2C,   2C,   0A,   00,   00,   00,   0D,   0D,   0D,   08, 
+    A0,   0E,   20,   F0,   00,   1E,   15,   01,   01,   01,   00,   00,   00,   00,   00,   A7,   BE,   FF,   FF,   05,   00,   00,   00,   2C,   2C,   2C,   2C,   0A,   00,   00,   00,   0D,   0D,   0D,   08,
     A0,   A4,   85,   14,   00,   01,   00,   00,   00,   00,   00,   00,   01,   00,   03,   00,   05,   00,   07,   00,   08,   00,   0A,   00,   0C,   00,   0E,   00,   10,   00,   11,   00,   13,   00,   14,   00,   16,   00,   18,   00,   19,   00,   1A,   00,   1C,   00,   1D,   00,   1F,   00,   20,   00,   21,   00,   24,   00,   25,   00,   27,   00,   29,   00,   2A,   00,   2C,   00,   2D,   00,   2F,   00,   31,   00,   32,   00,   34,   00,   35,   00,   37,   00,   39,   00,   3A,   00,   3C,   00,   3D,   00,   3F,   00,   41,   00,   42,   00,   44,   00,   46,   00,   47,   00,   49,   00,   4A,   00,   4C,   00,   4E,   00,   4F,   00,   51,   00,   52,   00,   54,   00,   56,   00,   57,   00,   59,   00,   5A,   00,   5C,   00,   5E,   00,   5F,   00,   61,   00,   62,   00,   64,   00,
     A0,   A5,   0D,   00,   00,   00,   00,   00,   00,   FF,   03,   1F,   00,   00,   00,   00,
         A0,   6A,   10,   EC,   04,   EC,   04,   EC,   04,   EC,   04,   EC,   04,   EC,   04,   EC,   04,   EC,   04
@@ -576,7 +576,7 @@ NXP_CORE_CONF_EXTN={20, 02, 9C, 12,
     A1, B5, 0C, 01, 03, 08, 0C, 03, 18, 32, 06, 78, 30, 6D, 00
 }
 #       A0, B8, 01, 01, //enable apdu logging
-#       A0, 1D, 01, 11, //enable L1 and L2 Lx_debug 
+#       A0, 1D, 01, 11, //enable L1 and L2 Lx_debug
 #       }
 
 ###############################################################################
@@ -662,39 +662,39 @@ NXP_SWP_RD_TAG_OP_TIMEOUT=20
 #Set the default AID route Location :
 #This settings will be used when application does not set this parameter
 # host  0x00
-# eSE   0x01
-# UICC  0x02
-# UICC2 0x03
-DEFAULT_AID_ROUTE=0x00
+# eSE   0xC0
+# UICC  0x80
+# UICC2 0x81
+DEFAULT_ROUTE=0x00
 
 ###############################################################################
 #Set the ISODEP (Mifare Desfire) route Location :
 #This settings will be used when application does not set this parameter
 # host  0x00
-# eSE   0x01
-# UICC  0x02
-# UICC2 0x03
-DEFAULT_ISODEP_ROUTE=0x02
+# eSE   0xC0
+# UICC  0x80
+# UICC2 0x81
+DEFAULT_ISODEP_ROUTE=0x80
 
 ###############################################################################
-#Set the Mifare CLT route Location :
+#Set the Default Off Host route Location :
 #This settings will be used when application does not set this parameter
 # host  0x00
-# eSE   0x01
-# UICC  0x02
-# UICC2 0x03
-DEFAULT_MIFARE_CLT_ROUTE=0x02
+# eSE   0xC0
+# UICC  0x80
+# UICC2 0x81
+DEFAULT_OFFHOST_ROUTE=0x80
 
 ###############################################################################
 #Set the Felica CLT route Location :
 #This settings will be used when application does not set this parameter
-# eSE   0x01
-# UICC  0x02
-# UICC2 0x03
+# eSE   0xC0
+# UICC  0x80
+# UICC2 0x81
 #Dongdong.Chang@CN.NFC.Basic.Hardware,1596847 2019/06/25,
-#Shenzhen 11 line must route typeF to 0x02 (none-eSE)
-#DEFAULT_FELICA_CLT_ROUTE=0x02
-DEFAULT_FELICA_CLT_ROUTE=0x01
+#Shenzhen 11 line must route typeF to 0x80 (none-eSE)
+#DEFAULT_NFCF_ROUTE=0x80
+DEFAULT_NFCF_ROUTE=0xC0
 
 ###############################################################################
 #Set the default AID Power state :
@@ -741,23 +741,12 @@ DEFAULT_MIFARE_CLT_PWR_STATE=0x3B
 DEFAULT_FELICA_CLT_PWR_STATE=0x3B
 
 ###############################################################################
-#Set the T4TNfcee AID Power state :
-#This settings will be used when application does not set this parameter
-# bit pos 0 = Switch On
-# bit pos 1 = Switch Off
-# bit pos 2 = Battery Off
-# bit pos 3 = Screen off unlock
-# bit pos 4 = Screen On lock
-# bit pos 5 = Screen Off lock
-DEFAULT_T4TNFCEE_AID_POWER_STATE=0x3B
-
-###############################################################################
 #Set the default Felica T3T System Code OffHost route Location :
 #This settings will be used when application does not set this parameter
 # host  0x00
-# eSE   0x01
-# UICC  0x02
-# UICC2 0x03
+# eSE   0xC0
+# UICC  0x80
+# UICC2 0x81
 # Nan.Zhang@CN.NFC.Basic.Hardware.2142272, 2018/09/05 CTS Verifier HCE Felica emulator tests fail.
 DEFAULT_SYS_CODE_ROUTE=0x00
 
@@ -880,15 +869,6 @@ NXP_NCI_PARSER_LIBRARY=0x01
 OS_DOWNLOAD_TIMEOUT_VALUE=60000
 
 ###############################################################################
-# Forcing HOST to listen for a selected protocol
-# 0x00 : Disable Host Listen
-# 0x01 : Enable Host to Listen (A)  for ISO-DEP tech A
-# 0x02 : Enable Host to Listen (B)  for ISO-DEP tech B
-# 0x04 : Enable Host to Listen (F)  for T3T Tag Type Protocol tech F
-# 0x07 : Enable Host to Listen (ABF)for ISO-DEP tech AB & T3T Tag Type Protocol tech F
-HOST_LISTEN_TECH_MASK=0x07
-
-###############################################################################
 # Enable forward functionality
 # Disable           0x00
 # Enable            0x01
@@ -915,11 +895,6 @@ OFF_HOST_SIM_PIPE_ID=0x0A
 # bit pos 5 = Screen Off lock
 #DEFAULT_SYS_CODE_PWR_STATE=0x00--default
 DEFAULT_SYS_CODE_PWR_STATE=0x39
-
-###############################################################################
-#Default Secure Element route id
-#DEFAULT_OFFHOST_ROUTE=0x01--default
-DEFAULT_OFFHOST_ROUTE=0x02
 
 ###############################################################################
 # Mifare Reader implementation
@@ -981,14 +956,14 @@ NXP_SET_CONFIG_ALWAYS=0x00
 
 ###############################################################################
 #OffHost ESE route location for MultiSE
-#ESE = 01
-OFFHOST_ROUTE_ESE={01}
+#ESE = C0
+OFFHOST_ROUTE_ESE={C0}
 
 ###############################################################################
 #OffHost UICC route location for MultiSE
-#UICC1 = 02
-#UICC2 = 03
-OFFHOST_ROUTE_UICC={02:03}
+#UICC1 = 80
+#UICC2 = 81
+OFFHOST_ROUTE_UICC={80:81}
 
 ###############################################################################
 #T4T NFCEE ENABLE
