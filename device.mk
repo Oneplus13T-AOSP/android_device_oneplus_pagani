@@ -31,6 +31,7 @@ $(call soong_config_set,surfaceflinger,vrrr_injection_mock,true)
 
 # Fingerprint
 $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
+$(call soong_config_set_bool,qtidisplay,oplus_udfps_input_press,true)
 
 # NFC
 PRODUCT_COPY_FILES += \
