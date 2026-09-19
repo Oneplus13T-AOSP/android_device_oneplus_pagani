@@ -20,6 +20,9 @@ TARGET_SCREEN_DENSITY := 480
 # Kernel
 TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_PAGANI_DTB=y
 
+# Opt in to the primary optical UDFPS compatibility path for this product.
+TARGET_KERNEL_ADDITIONAL_FLAGS += KCFLAGS+=-DOPLUS_OFP_UIREADY_COMPAT=1
+
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
 TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/properties/system_ext.prop
