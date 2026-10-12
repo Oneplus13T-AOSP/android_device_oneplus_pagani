@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 13T (PKX110_16.0.10.500(CN01)).
+## are from OnePlus 13T (PKX110_17.0.0.104(CN01)).
 
 # ACDB
 odm/etc/acdbdata/Audio_Parameter_Version.txt
@@ -759,6 +759,8 @@ odm/lib64/camera/libafCustomParam_Cam1.bin
 odm/lib64/camera/libafCustomParam_Cam2.bin
 odm/lib64/camera/libafCustomParam_Cam3.bin
 odm/lib64/camera/libpdCustomParam_Cam0.bin
+odm/lib64/camera/libpdCustomParam_Cam2.bin
+odm/lib64/camera/libpdCustomParam_Cam3.bin
 odm/lib64/camera/revision.txt
 odm/lib64/hw/camera.oemlayer.so
 odm/lib64/com.oplus.mcx.linearmapper.so
@@ -873,6 +875,7 @@ odm/lib64/libmvgfusion.so
 odm/lib64/libNamaWrapper.so
 odm/lib64/libocce3a.so
 odm/lib64/libocompression.so
+odm/lib64/liboplus_lightsensorprovider.so
 odm/lib64/liboplusdfx.so
 odm/lib64/libopluspdparam.so
 odm/lib64/liboutils.so
@@ -1122,6 +1125,7 @@ vendor/lib64/com.qti.qseeaon.so
 vendor/lib64/com.qti.qseeutils.so
 vendor/lib64/com.qti.settings.sm8750.so
 vendor/lib64/com.qti.stats.common.so
+vendor/lib64/com.qti.stats.sotr.so
 vendor/lib64/com.qualcomm.mcx.distortionmapper.so
 vendor/lib64/com.qualcomm.mcx.linearmapper.so
 vendor/lib64/com.qualcomm.mcx.nonlinearmapper.so
@@ -1372,8 +1376,8 @@ odm/etc/vintf/manifest/dvs-aidl-service.xml
 odm/etc/media_codecs_dolby_vision.xml:vendor/etc/media_codecs_dolby_vision.xml
 odm/lib64/vendor.dolby.dvs-V1-ndk.so
 my_product/etc/dolby_vision.cfg:product/etc/dolby_vision.cfg
-my_product/lib64/libdolbyeffect_4.1.so:product/lib64/libdolbyeffect_4.1.so
-my_product/lib64/liboplusdolbyeffect_4.1.so:product/lib64/liboplusdolbyeffect_4.1.so
+my_product/lib64/libdolbyeffect_5.0.so:product/lib64/libdolbyeffect_5.0.so
+my_product/lib64/liboplusdolbyeffect_5.0.so:product/lib64/liboplusdolbyeffect_5.0.so
 system/etc/dolby_vision.cfg
 vendor/etc/dolby_vision.cfg
 vendor/persist/display/dolby_vision.cfg
