@@ -29,6 +29,8 @@ namespace_imports = [
 blob_fixups: blob_fixups_user_type = {
     'odm/etc/init/init.camera_process.rc': blob_fixup()
         .regex_replace('    delete_recursion', '    #delete_recursion'),
+    'odm/etc/init/occe_create.rc': blob_fixup()
+        .regex_replace(r'(?m)^(?=/\*|\*)', '# '),
     'odm/lib64/libAlgoProcess.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
     (
