@@ -716,6 +716,7 @@ odm/etc/vintf/manifest/manifest_oplus_camera_rfi.xml
 odm/etc/vintf/manifest/manifest_oplus_cammidasservice_aidl.xml
 odm/etc/vintf/manifest/manifest_oplus_sendextcamcmd.xml
 odm/etc/vintf/manifest/vendor.oplus.camera.aon-impl.xml
+odm/lib64/camera/AIAWB_q.odnn
 odm/lib64/camera/components/com.oplus.node.depth.so
 odm/lib64/camera/components/com.oplus.node.evaof.so
 odm/lib64/camera/components/com.oplus.node.mvgsat.so
@@ -1416,6 +1417,9 @@ odm/firmware/uff_spi.mdt
 
 # Horae
 odm/etc/horae/horae_target.conf
+
+# Media color conversion
+odm/etc/static_lut_bt2020_to_sRGB_mm.cube
 
 # NFC firmware
 odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_45:vendor/firmware/sn220u.bin
