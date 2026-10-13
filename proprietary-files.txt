@@ -774,11 +774,13 @@ odm/lib64/libAncFilter.so
 odm/lib64/libAncHumanSegFigureFusion.so
 odm/lib64/libAncSegBaseSdk.so
 odm/lib64/libAncSegmentSdk.so
+odm/lib64/libAutoFocusCrop.so
 odm/lib64/libBasicTonePhoto.so
 odm/lib64/libBokehPre.so
 odm/lib64/libCNamaSDK_vendor.so
 odm/lib64/libCS.so
 odm/lib64/libCaptureBokeh.so
+odm/lib64/libColorMark.so
 odm/lib64/libDocRectification.so
 odm/lib64/libEIS.so
 odm/lib64/libEISLive.so
@@ -812,6 +814,7 @@ odm/lib64/libWaterMark.so
 odm/lib64/lib_rectify.so
 odm/lib64/libaecCustom.so
 odm/lib64/libai_perception_scene_detect.so
+odm/lib64/libaiboost_sydet.so
 odm/lib64/libaisal.so
 odm/lib64/libaisd.so
 odm/lib64/libaisd_fullfov.so
