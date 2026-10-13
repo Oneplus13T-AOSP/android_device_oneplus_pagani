@@ -1275,14 +1275,6 @@ odm/etc/display/qdcm_calib_data_AA594_P_7_A0020_dsc_cmd_mode_panel.json
 my_product/vendor/etc/display_apollo_list_AA594_P_7_A0020_dsc_cmd_mode_panel.xml:vendor/etc/display_apollo_list_AA594_P_7_A0020_dsc_cmd_mode_panel.xml
 my_product/vendor/etc/display_dbvgain_config_v2_AA594_P_7_A0020_dsc_cmd_mode_panel.xml:vendor/etc/display_dbvgain_config_v2_AA594_P_7_A0020_dsc_cmd_mode_panel.xml
 my_product/vendor/etc/display_demura_config_v2_AA594_P_7_A0020_dsc_cmd_mode_panel.xml:vendor/etc/display_demura_config_v2_AA594_P_7_A0020_dsc_cmd_mode_panel.xml
-odm/etc/PanelChaplin/3D-Lut_Center_P3.txt
-odm/etc/PanelChaplin/3D-Lut_Center_sRGB.txt
-odm/etc/PanelChaplin/3D-Lut_Enhance_P3.txt
-odm/etc/PanelChaplin/3D-Lut_Enhance_sRGB.txt
-odm/etc/PanelChaplin/3D-Lut_Stand_P3.txt
-odm/etc/PanelChaplin/3D-Lut_Stand_sRGB.txt
-odm/etc/PanelChaplin/3D-Lut_StandardMode_P3.txt
-odm/etc/PanelChaplin/3D-Lut_StandardMode_sRGB.txt
 odm/etc/PanelChaplin/AA594_P_7_A0020_dsc_cmd_mode_panel_1_100nit.odf
 odm/etc/PanelChaplin/AA594_P_7_A0020_dsc_cmd_mode_panel_1_2nit.odf
 odm/etc/PanelChaplin/AA594_P_7_A0020_dsc_cmd_mode_panel_1_max.odf
@@ -1308,7 +1300,6 @@ odm/etc/PanelChaplin/AA594_P_7_A0020_dsc_cmd_mode_panel_Nature_pGC.txt
 odm/etc/PanelChaplin/AA594_P_7_A0020_dsc_cmd_mode_panel_Vivid_100nits_pGC.txt
 odm/etc/PanelChaplin/AA594_P_7_A0020_dsc_cmd_mode_panel_Vivid_2nits_pGC.txt
 odm/etc/PanelChaplin/AA594_P_7_A0020_dsc_cmd_mode_panel_Vivid_pGC.txt
-odm/etc/PanelChaplin/AdjustValue
 odm/etc/PanelChaplin/Game_COMP3.txt
 odm/etc/PanelChaplin/Game_ColorInvert_Fliter.txt
 odm/etc/PanelChaplin/Game_FPS.txt
@@ -1322,8 +1313,6 @@ odm/etc/PanelChaplin/Game_OTOME_Fliter.txt
 odm/etc/PanelChaplin/Game_OldMovie_Fliter.txt
 odm/etc/PanelChaplin/Game_RPG.txt
 odm/etc/PanelChaplin/Game_Vivid_Fliter.txt
-odm/etc/PanelChaplin/Lut3D_311
-odm/etc/PanelChaplin/Lut3D_312
 odm/etc/PanelChaplin/panelchaplin
 odm/etc/p_7_a0020_backlight_data.xml
 odm/etc/p_7_a0020_cinema_eyeprotect_data.xml
@@ -1335,6 +1324,10 @@ odm/etc/p_7_a0020_eyeprotect_data.xml
 odm/etc/sdm_display_resolution_extn.xml:vendor/etc/display/sdm_display_resolution_extn.xml;TRYSRCFIRST
 vendor/etc/ltm_config_AA594_P_7_A0020_dsc_cmd_mode_panel.xml
 vendor/etc/spr_cfg_AA594_P_7_A0020_dsc_cmd_mode_panel.xml
+
+# Display features
+odm/etc/vintf/manifest/vintf_manifext_aidl_panelchaplin.xml
+odm/lib64/libPanelChaplin.so
 
 # Dolby Vision
 odm/bin/hw/dvs-aidl-service
