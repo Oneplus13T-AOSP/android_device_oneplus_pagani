@@ -35,3 +35,7 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
 include vendor/oneplus/pagani/BoardConfigVendor.mk
 
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+
+# Pagani-only Dolby DMS service policy and stable AIDL compatibility.
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/oneplus/dolby-pagani/sepolicy/vendor
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/oneplus/dolby-pagani/configs/vintf/dms-framework-matrix.xml

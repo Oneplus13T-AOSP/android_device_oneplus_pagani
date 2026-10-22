@@ -80,6 +80,9 @@ PRODUCT_COPY_FILES += \
 
 $(call soong_config_set_bool,OPLUS_LINEAGE_VIBRATOR_HAL,USE_EFFECT_STREAM,true)
 
+# Pagani software Dolby Atmos (before common product inheritance).
+$(call inherit-product, vendor/oneplus/dolby-pagani/dolby_pagani.mk)
+
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8750-common/common.mk)
 
