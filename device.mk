@@ -111,5 +111,12 @@ $(call inherit-product, device/oneplus/sm8750-common/common.mk)
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/pagani/pagani-vendor.mk)
 
+# OReality Audio and Holo Audio. Installed as effects, tuning data and a
+# platform-signed control app; no SELinux policy is added.
+TARGET_ENABLE_ONEPlus_OREALITY ?= true
+ifeq ($(TARGET_ENABLE_ONEPlus_OREALITY),true)
+$(call inherit-product, vendor/oneplus/oreality-pagani/oreality.mk)
+endif
+
 # Camera
 $(call inherit-product-if-exists, vendor/oplus/camera/opluscamera.mk)
