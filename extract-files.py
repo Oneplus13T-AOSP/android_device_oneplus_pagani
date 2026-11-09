@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from pathlib import Path
+
 from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
@@ -26,7 +28,45 @@ namespace_imports = [
     'vendor/qcom/opensource/commonsys-intf/display',
 ]
 
+def fixup_eis_snap_handle_format(ctx, file, file_path, *args, **kwargs):
+    """Adapt COS17 EIS's five legacy handle-format reads to pagani's SnapHandle."""
+    # Stock snapalloc format(): properties at 0x18 + format at 0x14 = 0x2c.
+    # Our snapalloc (also checked in the running phone): 0x18 + 0x1c = 0x34.
+    # 0x2c now contains unaligned_width, hence portrait preview's fmt:1280,
+    # EGL_BAD_PARAMETER and repeated framebuffer/render failures.
+    # Only these five loads feed ShareBuffer_CreateFromNativeHandle. Do not
+    # replace other 0x2c loads, which access unrelated EIS state structures.
+    # Anchors include the argument setup and the call in PKX110_17.0.0.104.
+    patterns = (
+        '042c40b9052080524500a072e303012a3ffcff97',
+        '842e40b9e18b4429e32f40b905408052e00314aa24c4ff97',
+        '042f40b9052080524500a072e00318aaeb1700b9b9c3ff97',
+        '042c40b90189402986c2ff97',
+        '042c40b90189402939c2ff97',
+    )
+    path = Path(file_path)
+    data = path.read_bytes()
+    replacements = []
+    for pattern in patterns:
+        old = bytes.fromhex(pattern)
+        instruction = int.from_bytes(old[:4], 'little')
+        new = (instruction + (2 << 10)).to_bytes(4, 'little') + old[4:]
+        old_count, new_count = data.count(old), data.count(new)
+        if (old_count, new_count) == (0, 1):
+            continue
+        if (old_count, new_count) != (1, 0):
+            raise ValueError('Unexpected libEIS handle-format code; re-audit SnapHandle ABI')
+        replacements.append((old, new))
+    # Validate every anchor before writing, including on partially patched input.
+    for old, new in replacements:
+        data = data.replace(old, new, 1)
+    if replacements:
+        path.write_bytes(data)
+
+
 blob_fixups: blob_fixups_user_type = {
+    'odm/lib64/libEIS.so': blob_fixup()
+        .call(fixup_eis_snap_handle_format, need_tmp_dir=False),
     (
         'odm/bin/hw/vendor-oplus-hardware-touch-V2-service',
         'vendor/lib64/libcamxcoreutils.so',
